@@ -1,5 +1,7 @@
+package Circus.Batch;
+
 public class Duck extends Bird {
-    @Override
+    @Override //@ are annotations that are not compiled themselves
     public String speak() {
         return "Quack Quack";
     }

@@ -1,3 +1,5 @@
+package Circus.Batch;
+
 public class Trainer {
     public static void main(String[] args) {
         Duck d = new Duck();
@@ -6,7 +8,6 @@ public class Trainer {
         Bird b = (Bird) d;  // upcasting
         getToSpeak(b);
 
-        Animal a = (Animal) b; // upcasting
         getToSpeak(a);
 
         Duck d2 = (Duck) a; // downcasting
@@ -25,7 +26,15 @@ public class Trainer {
     }
 
     private static void train(Bird bird) {
-        Duck d = (Duck) bird;
-        d.swim();
+        //if bird is not isntance of duck, nothing happens
+        //checks if bird is actually what type of animal, a duck
+        if (bird instanceof Duck) {
+            Duck d = (Duck) bird;
+            d.swim();
+        }
+            else {
+                Systme.out.println("not a duck");
+            }
+        }
     }
 }

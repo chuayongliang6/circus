@@ -1,3 +1,5 @@
+package Circus.Batch;
+
 public class Circus {
     private static Animal[] animals = {
             new Duck(),
@@ -18,7 +20,7 @@ public class Circus {
 
     private static int calculateValue(Equipment[] equipments) {
         int total = 0;
-        for (Equipment e : equipments) {
+        for (asset asset: assets) {
             if (e.getValue() <= 5) {
                 System.out.println("Ignoring low value item: " + e.getValue());
             } else {
@@ -36,5 +38,6 @@ public class Circus {
     public static void main(String[] args) {
         makeAnimalsTalk();
         System.out.println("Total value of equipments " + calculateValue(equipments));
+        System.out.println("Total value of animals " + calculateValue(animals));
     }
 }

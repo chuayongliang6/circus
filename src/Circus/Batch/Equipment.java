@@ -1,3 +1,5 @@
+package Circus.Batch;
+
 public abstract class Equipment {
     protected int purchasePrice;
 
